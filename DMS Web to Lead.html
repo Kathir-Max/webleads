@@ -1,0 +1,204 @@
+<html>
+<head>
+  <title>DMS On Boarding Form</title>
+  <style>
+	
+        .logo {
+            width: 200px; /* Adjust as needed */
+            height: auto;
+            margin-bottom: 20px; /* Add some space below the logo */
+        }
+	
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f7f9;
+      padding: 20px;
+    }
+
+    h2 {
+      background-color: #007bff;
+      color: white;
+      padding: 15px;
+      border-radius: 8px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    form {
+      background-color: #e7f1ff;
+      padding: 30px;
+      border-radius: 10px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .row {
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .column {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+
+    input[type="submit"] {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      margin-top: 20px;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+
+    .required:after {
+      content: " *";
+      color: red;
+    }
+  </style>
+</head>
+<body>
+<div style="text-align: center; width: 100%;">
+  <h2 style="display: inline-flex; align-items: center; font-size: 28px; margin: 0;">
+    <img src="https://emergingalliance--dmssandbox.sandbox.my.salesforce.com/resource/logo" 
+         alt="Company Logo" 
+         style="height: 30px; margin-right: 10px;">
+    DMS On Boarding Form
+  </h2>
+</div>
+<form action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DBl000001du1l" method="POST">
+
+<input type=hidden name="oid" value="00DBl000001du1l">
+<input type=hidden name="retURL" value="https://www.emerging-alliance.com/">
+
+    
+    <div class="row">
+      <!-- Left Column -->
+      <div class="column">
+         <label for="salutation" class="required">Salutation</label>
+        <select id="salutation" name="salutation">
+          <option value="">--None--</option>
+          <option value="Mr.">Mr.</option>
+          <option value="Ms.">Ms.</option>
+          <option value="Mrs.">Mrs.</option>
+        </select>
+
+        <label for="first_name">First Name</label>
+        <input id="first_name" name="first_name" type="text" maxlength="40">
+
+        <label for="last_name" class="required">Last Name</label>
+        <input id="last_name" name="last_name" type="text" maxlength="80" required>
+
+        
+
+        <label for="phone" class="required">Phone</label>
+        <input id="phone" name="phone" type="text" maxlength="40" required>
+
+        <label for="title">Title</label>
+        <input id="title" name="title" type="text" maxlength="40">
+        
+        <label for="00NBl0000030PmM">Lead Source</label>
+        <select id="00NBl0000030PmM" name="00NBl0000030PmM">
+          <option value="">--None--</option>
+          <option value="Cold Call">Cold Call</option>
+          <option value="Email">Email</option>
+          <option value="Event">Event</option>
+        </select>
+        <label for="Region">Region</label>
+        <Select id="Region" name="Region">
+          <option value="">--None--</option>
+          <option value="Eastern Region">Eastern Region</option>
+          <option value="Western Region">Western Region</option>
+          <option value="Northern Region">Northern Region</option>
+          <option value="Southern Region">Southern Region</option>
+        </Select>
+        <label for="street">Street</label>
+        <textarea name="street" id="street" rows="2"></textarea>
+
+        <label for="state">State/Province</label>
+        <input id="state" name="state" type="text" maxlength="20">
+
+        <label for="country">Country</label>
+        <input id="country" name="country" type="text" maxlength="40">
+      </div>
+
+      <!-- Right Column -->
+      <div class="column">
+        <label for="company" class="required">Company</label>
+        <input id="company" name="company" type="text" maxlength="40" required>
+
+        <label for="lead_status" class="required">Lead Status</label>
+        <select id="lead_status" name="lead_status" required>
+          <option value="">--None--</option>
+          <option value="Open - Not Contacted">Open - Not Contacted</option>
+          <option value="Working - Contacted">Working - Contacted</option>
+          <option value="Closed - Converted">Closed - Converted</option>
+          <option value="Closed - Not Converted">Closed - Not Converted</option>
+        </select>
+
+        <label for="00NBl0000030PmH" class="required">Lead Type</label>
+        <select id="00NBl0000030PmH" name="00NBl0000030PmH" required>
+          <option value="">--None--</option>
+          <option value="Distributor">Distributor</option>
+          <option value="Retailer">Retailer</option>
+        </select>
+
+        <label for="email" class="required">Email</label>
+        <input id="email" name="email" type="email" maxlength="80" required>
+
+        <label for="00NBl0000030PmR">Industry</label>
+        <select id="00NBl0000030PmR" name="00NBl0000030PmR">
+          <option value="">--None--</option>
+          <option value="Biotechnology">Biotechnology</option>
+          <option value="Health Care">Health Care</option>
+          <option Value ="Agriculture">Agriculture</option>
+          <option value="Banking">Banking</option>
+          <option value="Chemicals">Chemicals</option>
+          <option value="Construction">Construction</option>
+          <option value="Education">Education</option>
+        </select>
+
+        <label for="description">Description</label>
+        <textarea name="description" rows="3"></textarea>
+        <label for="Teritory">Teritory</label>
+        <Select id="Teritory" name="Teritory">
+          <option value="">--None--</option>
+          <option value="Chennai">Chennai</option>
+          <option value="Kanchipuram">Kanchipuram</option>
+          <option value="Vellore">Vellore</option>
+          <option value="Ranipet">Ranipet</option>
+        </Select>
+        <label for="city">City</label>
+        <input id="city" name="city" type="text" maxlength="40">
+
+        <label for="zip">Zip/Postal Code</label>
+        <input id="zip" name="zip" type="text" maxlength="20">
+
+      </div>
+    </div>
+
+    <input type="submit" value="Submit">
+  </form>
+
+</body>
+</html>
